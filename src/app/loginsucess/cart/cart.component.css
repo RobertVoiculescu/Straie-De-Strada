@@ -1,0 +1,31 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .cart_section{
+    padding: 40px 0;
+  }
+
+  .btn{
+    background-color: rgb(180, 47, 70);
+    font-size:20px;
+    color: white;
+    margin: 0 10px;
+}
+
+img{
+    width: 200px;
+    height:200px;
+}

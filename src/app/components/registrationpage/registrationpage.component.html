@@ -1,0 +1,76 @@
+<app-headerbeforelog></app-headerbeforelog>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <section class="container">
+      <header style="color: white;">Înregistrare cont nou</header>
+      <form #RegistrationForm="ngForm" class="form" (ngSubmit)="registerbut()" >
+          <div>
+            <div class="input-box">
+                <div class="form-group">
+                  <label>Nume cont</label>
+                  <small [class.text-danger]>{{message}}</small>
+                  <input type="text" placeholder="Alege un nume de cont" required name="username" class="form-control"
+                   [(ngModel)]="reguservalues.username"  #username="ngModel" pattern="[A-Za-z ]{4,13}"
+                   [class.is-invalid]="username.invalid && username.touched">
+                   <small class="text-danger" [class.d-none]="username.valid || username.untouched">Numele de cont nu poate fi acceptat</small>
+                </div>
+            </div>
+
+            <div class="input-box">
+              <label>Email</label>
+              <input type="email" placeholder="Adaugă email" required  name="emailid"
+              #emailid="ngModel" class="form-control" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              [(ngModel)]="reguservalues.emailid"
+              [class.is-invalid]="emailid.invalid && emailid.touched">
+
+              <div *ngIf="emailid.errors && (emailid.invalid && emailid.touched)">
+                <small class="text-danger"  *ngIf="emailid.errors?.['required']" >Emailul nu poate fi acceptat</small>
+                <small class="text-danger" *ngIf="emailid.errors?.['pattern']"> Emailul nu este valid </small>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="input-box">
+                <label>Număr telefon</label>
+                <input type="number" placeholder="Adaugă număr telefon" required  name="phonenumber" #phonenumber="ngModel"
+                [(ngModel)]="reguservalues.phno"  pattern="[6-9]{1}[0-9]{8}" class="form-control"
+                [class.is-invalid]="phonenumber.invalid && phonenumber.touched">
+                <small class="text-danger" [class.d-none]="phonenumber.valid || phonenumber.untouched">Numărul de telefon nu poate fi acceptat</small>
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                  <label>Password</label>
+                  <input type="password" placeholder="Adaugă o nouă parolă" required  name="password"
+                   #password="ngModel" class="form-control" pattern="[0-9a-zA-Z_@#!$%^&*()?]{4,15}"
+                   [(ngModel)]="reguservalues.password"
+                   [class.is-invalid]="password.invalid && password.touched">
+                   <small class="text-danger" [class.d-none]="password.valid || password.untouched">Introduceti parola nouă</small>
+                </div>
+            </div>
+
+            <div class="column">
+              <div class="input-box">
+                <label>Confirmați parola</label>
+                <input type="password" placeholder="Introduceți parola din nou" required  name="confirmpassword"
+                 #confirmpassword="ngModel" (ngModel)="reguservalues.password"
+                 [class.is-invalid]="confirmpassword.invalid && confirmpassword.touched">
+                 <small class="text-danger" [class.d-none]="(confirmpassword.value==password.value)">Parola nu corespunde cu cealaltă</small>
+              </div>
+            </div>
+          <button type="submit" [disabled]="RegistrationForm.form.invalid">CONT NOU</button>
+          <br>
+          <button style="width: 100px;height: 25px; background-color: rgb(180, 47, 70); color: white; border: 1px solid black;" type="reset" >Resetează</button>
+        </div>
+        <br>
+        <small style="margin-left: 210px;" class="regisnav" routerLink="/loginpage">Ai cont deja? Loghează-te aici </small>
+      </form>
+    </section>
+  </body>
+</html>

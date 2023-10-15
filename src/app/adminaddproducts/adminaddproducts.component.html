@@ -1,0 +1,23 @@
+<app-admindashboard></app-admindashboard>
+
+<form class="col-md-4 offset-md-4">
+    <label>Nume</label>
+    <input type="text" class="form-control"  placeholder="Nume produs">
+
+    <label>Preț</label>
+    <input type="number" class="form-control"  placeholder="Preț produs" >
+
+    <label>Descriere</label>
+    <input type="text" class="form-control"  placeholder="Detalii produs"  >
+
+    <label>Rating</label>
+    <input type="text" class="form-control"  placeholder="Rating produs"  >
+
+    <div class="form-group">
+      <br>
+      <input type="file" (change)="onFileChanged($event)">
+      <img [src]="imgURL" height="200" width="200">
+    </div>
+    <br><br>
+    <button type="button" class="btn btn-success" (click)="saveBook()"  style="background-color: rgb(180, 47, 70)">Adaugă produs</button>
+  </form>

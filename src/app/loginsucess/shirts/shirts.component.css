@@ -1,0 +1,86 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles for the layout */
+
+
+.product {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.product img {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+}
+.product img:hover{
+  transform: scale(1.1);
+}
+
+.product h3 {
+  margin-top: 0px;
+}
+
+.product p {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.product{
+  padding: 40px 0;
+}
+
+.box{
+  padding: 20px;
+  border:1px solid rgb(180, 47, 70);
+  border-radius: 2px;
+  width: 260px;
+  height: 400px;
+}
+
+.content  h4{
+  margin-top: 0px;
+}
+
+.btn{
+  background-color: rgb(180, 47, 70);
+  border-radius: 50%;
+  font-size: 10px;
+  color: white;
+  margin: 0 8px;
+}
+.content span{
+  font-weight: 800;
+  font-size: 18px;
+}
+.cart_btn{
+  border-radius: 2px;
+  background-color: rgb(180, 47, 70);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.cart_btn:hover{
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border: 1px solid black;
+}
+img{
+  width: 200px;
+  height: 300px;
+}
+
+main{
+  margin-left: 300px;
+}

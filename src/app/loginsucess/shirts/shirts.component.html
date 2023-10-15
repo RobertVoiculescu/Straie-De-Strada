@@ -1,0 +1,39 @@
+<app-headerafterlogin></app-headerafterlogin>
+
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>
+<h3 style="background-color: rgb(180, 47, 70); color: white; text-align: center;">Tricouri și Hanorace</h3>
+<main>
+
+    <section>
+        <section class="product">
+          <div class="container text-center">
+              <div class="row" >
+                  <div class="col-md-3" *ngFor="let prod of productArray ">
+                      <div class="box">
+                        <span style="background-color: gray; color: white; margin-left: 200px;" >{{prod.rating}}</span>
+                          <div class="product_image">
+                            <img src="{{prod.img}}" alt="P1"/>
+                          </div>
+                          <div class="content">
+                              <h5>{{prod.productname}}</h5>
+                              <h6><b>{{prod.amt}} lei</b></h6>
+                              <button type="button" class="btn" (click)="plus(prod)"><i class="fa fa-plus"></i></button>
+                              <span>{{prod.qnt}}</span>
+                              <button type="button" class="btn" (click)="minus(prod)"><i class="fa fa-minus"></i></button>
+                          </div>
+                          <button type="button" class="cart_btn" (click)="addcart(prod)">ADAUGĂ ÎN COȘ</button>
+                      </div>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+ </section>
+</main>
+<footer style="background-color: rgb(180, 47, 70); color:white; text-align: center;position:relative;">
+    <p>© 2023 Straie de Stradă | All rights reserved.</p>
+</footer>

@@ -1,0 +1,35 @@
+
+<section class="cart_section">
+    <div class="container">
+       <h3>COȘ CUMPĂRĂTURI</h3>
+       <table  style="border: 1px solid black;">
+           <tr>
+             <th style="text-align:center">Nume produs</th>
+             <th style="text-align:center">Prezentare produs</th>
+             <th style="text-align:center">Preț</th>
+             <th style="text-align:center">Cantitate</th>
+             <th style="text-align:center">Total</th>
+             <th style="text-align:center">Șterge produs</th>
+           </tr>
+           <tr *ngFor="let carts of getCartDetails">
+             <td style="font-weight: bolder;">{{carts.productname}}</td>
+             <td><img src="{{carts.img}}" alt="P1"/></td>
+             <td>{{carts.amt}} lei</td>
+             <td>
+               <div class="content">
+                   <button type="button" class="btn" (click)="increaseQuantity(carts.productId,carts.qnt)"><i class="fa fa-plus"></i></button>
+                   <span>{{carts.qnt}}</span>
+                   <button type="button" class="btn" (click)="decreaseQuantity(carts.productId,carts.qnt)"><i class="fa fa-minus"></i></button>
+               </div>
+             </td>
+             <td>{{carts.qnt*carts.amt}} lei</td>
+             <td><h2 type="button"  class="text-center" (click)="rowdelete(carts.productId)"><i class="fa fa-trash-o"></i></h2></td>
+           </tr>
+         </table>
+         <h3 class="text-left">Total comandă: {{Total}} lei</h3>
+         <button type="button" style="margin-left:1200px;" (click)="RemoveAll()">Șterge toate produsele</button>
+         <h3 class="text-center"><button type="button" class="btn btn-info " (click)="finalbooking()" >COMANDĂ</button></h3>
+
+    </div>
+
+    </section>

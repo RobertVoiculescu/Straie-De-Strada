@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title> Customer Contact Form </title>
+    <link rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title"> CONTACTAȚI-NE</div>
+    <div class="content">
+      <form (ngSubmit)="onSubmit()" >
+        <div class="user-details">
+
+
+          <div class="input-box">
+            <span class="details">Nume Prenume</span>
+            <input type="text" placeholder="Introduceți numele dvs." required name="name"
+            [(ngModel)]="user.name">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Introduceți emailul dvs." required name="email"
+            [(ngModel)]="user.email">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Număr de telefon</span>
+            <input type="number" placeholder="Introduceți numărul de telefon" required name="phNo"
+            [(ngModel)]="user.phNo">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Numele produsului comandat</span>
+            <input type="text" placeholder="Introduceți numele produsului" required name="productname"
+             [(ngModel)]="user.productname">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Mesaj</span>
+            <textarea type="text" placeholder="Introduceți mesajul dvs." required rows="8" cols="50" name="message"
+             [(ngModel)]="user.message"></textarea>
+          </div>
+
+        </div>
+        <div class="button">
+          <input type="submit" value="TRIMITE">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
