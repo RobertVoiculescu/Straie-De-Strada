@@ -10,3 +10,4 @@ Straie de Stradă | Online Streetwear Shop
 ![Slide8](https://github.com/RobertVoiculescu/Straie-De-Strada/assets/128408362/23deb330-0280-43e6-b115-bc430a003e6c)
 ![Slide9](https://github.com/RobertVoiculescu/Straie-De-Strada/assets/128408362/10497ae6-24c8-4d9a-92fd-9735b5f27b1f)
 ![Slide10](https://github.com/RobertVoiculescu/Straie-De-Strada/assets/128408362/eb51d1e0-fa48-4552-baa7-2353abc7ad7e)
+# Video
